@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <h1>Oldu ulan oldu!!!</h1>
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Kayıt Ol</th>
+            <th scope="col">Giriş Yap</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a asp-controller="AppUser" asp-action="Register">Kayıt ol</a></td>
+            <td><a asp-controller="AppUser" asp-action="Login">Giriş</a></td>
+        </tr>
+    </tbody>
+</table>
